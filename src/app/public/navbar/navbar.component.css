@@ -1,0 +1,29 @@
+
+
+h1{
+  margin-right: 15px;
+  color: azure;
+}
+.nav{
+box-shadow: rgba(33, 35, 38, 0.5) 0px 10px 10px -10px;
+
+}
+a{
+font-size: 20px;
+text-decoration: none;
+
+}
+.navbar{
+  background: linear-gradient(45deg, rgb(29, 62, 83),rgb(45, 86, 110));
+
+}
+.navbar-light .navbar-nav .nav-link {
+  color: white
+}
+
+img{
+  width: 100px;
+}
+.activo{
+  color: red;
+}

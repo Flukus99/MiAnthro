@@ -1,0 +1,35 @@
+
+<div class="card">
+
+  <div class="card-body">
+    <form action="">
+        <div class="container" >
+         <h3>Niños de 0 a 2 años</h3>
+          <button type="button" class="btn btn-success" id="btn_inputFile" >Seleccionar documento</button>
+          <input #inputFile type="file" name="ninos" id="update" (change)="capturarArchivo($event)" accept=".csv" >
+        </div>
+
+
+        <div class="success-checkmark" *ngIf="subir">
+          <div class="check-icon">
+            <span class="icon-line line-tip"></span>
+            <span class="icon-line line-long"></span>
+            <div class="icon-circle"></div>
+            <div class="icon-fix"></div>
+          </div>
+        </div>
+
+
+      <button type="submit"(click)="updateData()" *ngIf="subir"  class="btn btn-success" id="btn_update" data-bs-toggle="tooltip" data-bs-placement="top" title="subir el archivo" >subir archivo</button>
+
+      <img src="../../../assets/images/csv_image.png" alt="" id="csv_img" *ngIf="dowload">
+      <button (click)="dowloadData()" *ngIf="dowload"  class="btn btn-success" id="btn_dowload"> dowload</button>
+      <app-loading *ngIf="loading"></app-loading>
+      <h3 class="recordatorio" *ngIf="!subir">Recuerda verificar los datos antes de subir el documento</h3>
+    </form>
+  </div>
+  <img src="../../../assets/images/niños.PNG" alt="">
+</div>
+
+
+
