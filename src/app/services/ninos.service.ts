@@ -11,11 +11,11 @@ export class NinosService {
   constructor(private http: HttpClient) {}
 
   updateData(data: FormData):Observable<any>{
-    return this.http.post('https://miantrhro.herokuapp.com/files/ninos', data);
+    return this.http.post('https://mianthro.herokuapp.com/files/ninos', data);
   }
 
   dowloadData():Observable<any>{
-    return this.http.get('https://miantrhro.herokuapp.com/descarga',{responseType:"text"})
+    return this.http.get('https://mianthro.herokuapp.com/descarga',{responseType:"text"})
 
   }
 }
