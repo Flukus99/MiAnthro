@@ -17,7 +17,7 @@ const EXCEL_EXT='.csv'
 export class NinosComponent implements OnInit {
 
 
-
+  public archivo:string=""
   private filetmp:any;
   public documento:any;
   public name:string="documento";
@@ -36,15 +36,12 @@ export class NinosComponent implements OnInit {
 
     const file=$event.target.files[0];
      this.filetmp=file
+     this.archivo=this.filetmp.name
+     console.log(this.filetmp)
      this.subir=true
 
      Swal.fire("recuerda revisar los datos antes de subirlos","","warning",)
 
-     const fileData:any=document.querySelector('#update');
-     this.renderer2.setStyle(fileData,"opacity",1)
-
-     const btn_inputFile:any=document.querySelector('#btn_inputFile');
-     this.renderer2.setStyle(btn_inputFile,"z-index",1)
 
      const block_btn:any=document.querySelector('#update_ninas');
      this.renderer2.setStyle(block_btn,"display","none")

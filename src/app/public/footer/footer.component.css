@@ -1,6 +1,6 @@
 .footer{
   display: grid;
-  grid-template-columns: repeat(20,1fr);
+  grid-template-columns: repeat(20,5vw);
   height: 250px;
   padding-top: 50px;
   background: linear-gradient(to right,rgb(26, 49, 63),rgb(29, 62, 83));
@@ -37,7 +37,7 @@ h3{
   margin-bottom: 15px;
 }
 .copy{
-  grid-column: 6/11;
+  grid-column: 6/19;
   display: flex;
   align-items: center;
   color: rgb(212, 212, 212);
@@ -46,4 +46,42 @@ h3{
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 0;
+}
+
+@media screen and (max-width:1370px) {
+
+  .redes{
+    grid-column: 11/19;
+
+  }
+
+}
+
+
+
+@media screen and (max-width:870px) {
+
+.copy{
+  grid-column: 1/15;
+}
+.redes{
+  grid-column: 8/19;
+}
+
+
+}
+
+
+@media screen and (max-width:800px) {
+  .footer{
+    grid-template-rows: repeat(3,150px);
+  }
+  .redes{
+    grid-column: 1/15;
+    grid-row: 2;
+    width: 400px;
+  }
+  .footer{
+    height: 500px;
+  }
 }

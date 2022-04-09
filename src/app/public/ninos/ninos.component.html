@@ -5,8 +5,13 @@
     <form action="">
         <div class="container" >
          <h3>Niños de 0 a 2 años</h3>
-          <button type="button" class="btn btn-success" id="btn_inputFile" >Seleccionar documento</button>
-          <input #inputFile type="file" name="ninos" id="update" (change)="capturarArchivo($event)" accept=".csv" >
+
+          <div class="container_button">
+            <button type="button" class="btn btn-success" id="btn_inputFile" >Seleccionar documento</button>
+            <input #inputFile type="file" name="ninos" id="update" (change)="capturarArchivo($event)" accept=".csv"  >
+            <p class="file_name">{{archivo}}</p>
+          </div>
+
         </div>
 
 
@@ -28,7 +33,7 @@
       <h3 class="recordatorio" *ngIf="!subir">Recuerda verificar los datos antes de subir el documento</h3>
     </form>
   </div>
-  <img src="../../../assets/images/niños.PNG" alt="">
+  <img src="../../../assets/images/niños.PNG" alt="" id="ninos_img">
 </div>
 
 
